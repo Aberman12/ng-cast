@@ -5,13 +5,12 @@ angular.module('video-player')
     query: '<'
   },
   controller: function(){
-
-    this.query2 = '';
-    this.func = () =>{
-      // query = this.query2;
-      console.log('query2', this.query2)
+    this.keyEnter = (event) => {
+      if(event.keyCode === 13){
+        this.query(this.query2);
+      }
     }
-
+    this.query2 = '';
   },
   templateUrl: 'src/templates/search.html'
 });

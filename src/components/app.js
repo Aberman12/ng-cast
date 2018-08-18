@@ -6,7 +6,6 @@ angular.module('video-player')
     });
     this.query = 'asdf';
     this.changeQuery = (query) => {
-        console.log('query app', query);
         this.query = query;
         youTube.search(this.query, (data) => {
             this.exampleData = data;
@@ -14,11 +13,8 @@ angular.module('video-player')
         });
     }
     this.changeVid = (video) => {
-        console.log('tesetset', video)
         this.currentVideo = this.exampleData[video];
     }
-    console.log('currentVideo on app.js', this.currentVideo)
-
 })
 .component('app', {
   controller: 'app-controller',
